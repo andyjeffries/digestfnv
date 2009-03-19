@@ -2,7 +2,9 @@
 
 After reading about how Twitter moved to using FNV hash values instead of MD5 hash values for their
 cache keys, I looked around for a Ruby implementation and only found a native one.  This is a pure
-Ruby implemenation of FNV
+Ruby implemenation of FNV.  To be honest, it kind of defeats the point - it's much slower than the
+native one and much slower than the MD5 library it would be pitted against - but it may be useful
+for someone who wants to understand FNV and prefers reading Ruby code.
 
 ==Usage
 
