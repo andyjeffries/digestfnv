@@ -1,0 +1,20 @@
+=Digest::FNV
+
+After reading about how Twitter moved to using FNV hash values instead of MD5 hash values for their
+cache keys, I looked around for a Ruby implementation and only found a native one.  This is a pure
+Ruby implemenation of FNV
+
+==Usage
+
+In your code:
+
+  require 'digestfnv'
+  Digest::FNV.hexdigest("abc123")
+
+You can specify a different digest length (32, 64, 128, 256, 512 and 1024 are accepted - 32 is the default) using:
+
+  Digest::FNV.hexdigest("abc123", 64)
+
+You can also return the value as an integer if you prefer using:
+
+  Digest::FNV.calculate("abc123", 64)
